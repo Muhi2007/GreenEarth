@@ -152,12 +152,6 @@ export function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-6">
-            <Link
-              to="/login"
-              className={cn("text-sm font-semibold hover:text-brand-green-light transition-colors", navTextColor)}
-            >
-              Login
-            </Link>
             <Button asChild className="bg-brand-green text-white hover:bg-brand-green-dark btn">
               <Link to="/get-started">Get Started</Link>
             </Button>
