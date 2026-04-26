@@ -3,7 +3,7 @@ import { AudiencePageTemplate, AudiencePageData } from "@/components/templates/A
 const propertyManagersData: AudiencePageData = {
   hero: {
     heading: "No Tiles Broken. Ever.",
-    subheading: "Seal pipe leaks behind your bathroom walls and concrete slabs without a single hammer strike. AquaClot delivers results in hours, not days.",
+    subheading: "Seal pipe leaks behind your bathroom walls and concrete slabs without a single hammer strike. Pi-Patch delivers results in hours, not days.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2000&auto=format&fit=crop",
   },
   painPoints: [
@@ -22,14 +22,14 @@ const propertyManagersData: AudiencePageData = {
   ],
   solution: {
     heading: "Cut repair costs by 70%. Finish in hours, not days.",
-    body: "AquaClot locates the exact pipe segment using AI-driven KNN simulation, then injects a food-grade bio-sealant that self-seals within 5 seconds of contacting the leak. No demolition, no disruption, no detectable trace on your surfaces.",
+    body: "Pi-Patch locates the exact pipe segment using AI-driven KNN simulation, then injects a food-grade bio-sealant that self-seals within 5 seconds of contacting the leak. No demolition, no disruption, no detectable trace on your surfaces.",
   },
   products: [
     {
-      eyebrow: "AquaClot™ Detect",
+      eyebrow: "Pi-Patch™ Detect",
       name: "Locate the Leak Precisely",
       description: "Digital twin + KNN localization pinpoints the cracked segment without physical probing.",
-      href: "/aquaclot-detect",
+      href: "/pi-patch-detect",
       image: ""
     }
   ],

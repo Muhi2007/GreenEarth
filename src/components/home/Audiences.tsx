@@ -33,7 +33,7 @@ export function Audiences() {
             Built For Every Scale
           </h2>
           <p className="text-lg text-text-muted max-w-2xl mx-auto italic font-serif">
-            From a single cracked bathroom pipe to a city's underground network — AquaClot adapts.
+            From a single cracked bathroom pipe to a city's underground network — Pi-Patch adapts.
           </p>
         </div>
 

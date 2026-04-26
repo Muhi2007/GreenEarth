@@ -22,6 +22,7 @@ const statusColors: Record<string, string> = {
 
 // ─── MapPoint sub-component ──────────────────────────────────────
 interface MapPointProps {
+  key?: React.Key;
   point: typeof mapPoints[0];
   index: number;
   isActive: boolean;
@@ -102,14 +103,14 @@ export function WorldMap() {
       <div className="container mx-auto px-5 max-w-5xl relative z-10 flex flex-col items-center">
         <p className="text-brand-green font-bold text-xs uppercase tracking-[0.2em] mb-4">Global Reach</p>
         <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-12 uppercase tracking-tight max-w-3xl leading-[1.1]">
-          AquaClot™ Technology is Active All Over the World.
+          Pi-Patch™ Technology is Active All Over the World.
         </h2>
 
         {/* Map container */}
         <div className="relative w-full max-w-4xl mx-auto mb-6 select-none">
           <img
             src="/images/world-map.png"
-            alt="AquaClot global deployment map"
+            alt="Pi-Patch global deployment map"
             className="w-full h-auto"
             draggable={false}
           />

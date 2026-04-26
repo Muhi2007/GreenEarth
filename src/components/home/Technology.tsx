@@ -11,11 +11,11 @@ export function Technology() {
             Biomimetic Engineering
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-3 uppercase tracking-tight max-w-3xl">
-            AquaClot™ Technology: How Liquid Becomes a Seal
+            Pi-Patch™ Technology: How Liquid Becomes a Seal
           </h2>
           <div className="w-12 h-[3px] rounded-full bg-brand-green mb-6" />
           <p className="text-lg text-text-muted max-w-2xl font-serif italic leading-relaxed">
-            AquaClot mimics the human body's blood-clotting mechanism — a liquid that flows freely until it finds the leak, then hardens instantly to seal it. No digging. No waiting. No waste.
+            Pi-Patch mimics the human body's blood-clotting mechanism — a liquid that flows freely until it finds the leak, then hardens instantly to seal it. No digging. No waiting. No waste.
           </p>
         </div>
 

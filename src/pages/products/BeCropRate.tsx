@@ -3,13 +3,13 @@ import { FileArchive, Shield, BarChart3 } from "lucide-react";
 
 const reportData: ProductPageData = {
   hero: {
-    eyebrow: "AquaClot™ Report",
+    eyebrow: "Pi-Patch™ Report",
     heading: "Documentation That Builds Trust.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
     heading: "Every repair delivered with a full audit trail — ready for insurance, regulators, and investors.",
-    body: "AquaClot™ Report is the documentation layer that closes the loop on every repair. Pre and post-repair pressure data, material usage logs, environmental compliance certificates, and hydrostatic test results — all compiled automatically and delivered in a structured format built for auditability.",
+    body: "Pi-Patch™ Report is the documentation layer that closes the loop on every repair. Pre and post-repair pressure data, material usage logs, environmental compliance certificates, and hydrostatic test results — all compiled automatically and delivered in a structured format built for auditability.",
   },
   features: [
     {
@@ -29,9 +29,9 @@ const reportData: ProductPageData = {
     }
   ],
   steps: [
-    { number: "1", title: "Detect & Seal", body: "AquaClot™ Detect and Seal complete the repair with automated data capture throughout." },
-    { number: "2", title: "Validate", body: "AquaClot™ Validate generates the pressure test certificate and appends it to the report package." },
-    { number: "3", title: "Deliver", body: "The full AquaClot™ Report is delivered digitally within 24 hours of repair completion." },
+    { number: "1", title: "Detect & Seal", body: "Pi-Patch™ Detect and Seal complete the repair with automated data capture throughout." },
+    { number: "2", title: "Validate", body: "Pi-Patch™ Validate generates the pressure test certificate and appends it to the report package." },
+    { number: "3", title: "Deliver", body: "The full Pi-Patch™ Report is delivered digitally within 24 hours of repair completion." },
   ],
   caseStudy: {
     headline: "Municipal client received a full repair audit trail accepted by their infrastructure regulator on first submission.",

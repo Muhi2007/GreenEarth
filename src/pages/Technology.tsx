@@ -15,10 +15,10 @@ export function Technology() {
 
       <section className="py-16 md:py-24 max-w-4xl mx-auto px-5 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
-          How AquaClot™ Works
+          How Pi-Patch™ Works
         </h2>
         <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-          AquaClot mimics the human body's blood-clotting mechanism. A food-grade bio-sealant flows freely through your pipe under normal pressure — until it exits through a micro-fissure, where contact with calcium in surrounding concrete triggers instant cross-linking into a 50 kPa hydrogel plug. In under 5 seconds.
+          Pi-Patch mimics the human body's blood-clotting mechanism. A food-grade bio-sealant flows freely through your pipe under normal pressure — until it exits through a micro-fissure, where contact with calcium in surrounding concrete triggers instant cross-linking into a 50 kPa hydrogel plug. In under 5 seconds.
         </p>
       </section>
 

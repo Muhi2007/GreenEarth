@@ -11,13 +11,13 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 font-bold text-2xl tracking-tight mb-6">
               <Droplet className="w-8 h-8 text-brand-green-light fill-brand-green-light" />
-              <span>AquaClot</span>
+              <span>Pi-Patch</span>
             </Link>
             <p className="text-text-muted text-base mb-4 max-w-sm leading-relaxed">
               Autonomous fluidic pipe healing. We don't break walls. We heal them.
             </p>
             <p className="text-text-muted text-sm mb-8">
-              <span className="text-white">contact@aquaclot.az</span>
+              <span className="text-white">contact@pi-patch.az</span>
               <br />
               Baku, Azerbaijan
             </p>
@@ -35,10 +35,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-text-inverse mb-6 text-base tracking-wide">Products</h4>
             <ul className="space-y-4 text-sm font-medium text-text-muted">
-              <li><Link to="/aquaclot-detect" className="hover:text-white transition-colors">AquaClot™ Detect</Link></li>
-              <li><Link to="/aquaclot-seal"   className="hover:text-white transition-colors">AquaClot™ Seal</Link></li>
-              <li><Link to="/aquaclot-validate" className="hover:text-white transition-colors">AquaClot™ Validate</Link></li>
-              <li><Link to="/aquaclot-report"  className="hover:text-white transition-colors">AquaClot™ Report</Link></li>
+              <li><Link to="/pi-patch-detect" className="hover:text-white transition-colors">Pi-Patch™ Detect</Link></li>
+              <li><Link to="/pi-patch-seal"   className="hover:text-white transition-colors">Pi-Patch™ Seal</Link></li>
+              <li><Link to="/pi-patch-validate" className="hover:text-white transition-colors">Pi-Patch™ Validate</Link></li>
+              <li><Link to="/pi-patch-report"  className="hover:text-white transition-colors">Pi-Patch™ Report</Link></li>
             </ul>
           </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border-dark pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-text-muted">
-          <p>© {new Date().getFullYear()} AquaClot. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Pi-Patch. All rights reserved.</p>
           <div className="flex gap-8">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms"   className="hover:text-white transition-colors">Terms of Use</Link>

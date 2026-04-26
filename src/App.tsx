@@ -44,18 +44,18 @@ export default function App() {
           <Route path="becrop-trials" element={<BeCropTrials />} />
           <Route path="becrop-rate"   element={<BeCropRate />} />
 
-          {/* AquaClot product routes */}
-          <Route path="aquaclot-detect"   element={<BeCropFarm />} />
-          <Route path="aquaclot-seal"     element={<BeCropTest />} />
-          <Route path="aquaclot-validate" element={<BeCropTrials />} />
-          <Route path="aquaclot-report"   element={<BeCropRate />} />
+          {/* Pi-Patch product routes */}
+          <Route path="pi-patch-detect"   element={<BeCropFarm />} />
+          <Route path="pi-patch-seal"     element={<BeCropTest />} />
+          <Route path="pi-patch-validate" element={<BeCropTrials />} />
+          <Route path="pi-patch-report"   element={<BeCropRate />} />
 
           {/* Legacy audience routes (preserved) */}
           <Route path="farmers"      element={<Farmers />} />
           <Route path="advisors"     element={<Advisors />} />
           <Route path="manufacturer" element={<Manufacturer />} />
 
-          {/* AquaClot audience routes */}
+          {/* Pi-Patch audience routes */}
           <Route path="property-managers"  element={<Farmers />} />
           <Route path="facility-operators" element={<Advisors />} />
           <Route path="municipal-partners" element={<Manufacturer />} />

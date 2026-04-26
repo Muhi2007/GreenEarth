@@ -5,7 +5,7 @@ export function About() {
   return (
     <div className="bg-bg-white relative">
       <PageHero
-        eyebrow="About AquaClot"
+        eyebrow="About Pi-Patch"
         heading="We Rebuild Infrastructure Without Breaking It."
         subheading="Founded to answer one question: why does fixing a 5mm pipe crack require a sledgehammer?"
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop"
@@ -16,7 +16,7 @@ export function About() {
           Our Mission
         </h2>
         <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-          AquaClot was built on a simple premise: the cure for a micro-fissure should not cost more — financially or structurally — than the leak itself. We combine AI-driven leak localization with biomimetic fluidic chemistry to heal embedded pipes from the inside. Based in Baku, Azerbaijan, we are bringing non-destructive pipe repair technology to a global infrastructure market that has not fundamentally changed in 50 years.
+          Pi-Patch was built on a simple premise: the cure for a micro-fissure should not cost more — financially or structurally — than the leak itself. We combine AI-driven leak localization with biomimetic fluidic chemistry to heal embedded pipes from the inside. Based in Baku, Azerbaijan, we are bringing non-destructive pipe repair technology to a global infrastructure market that has not fundamentally changed in 50 years.
         </p>
       </section>
 

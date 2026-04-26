@@ -3,13 +3,13 @@ import { ScanSearch, Network, Zap } from "lucide-react";
 
 const detectData: ProductPageData = {
   hero: {
-    eyebrow: "AquaClot™ Detect",
+    eyebrow: "Pi-Patch™ Detect",
     heading: "Find the Leak. Precisely.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
     heading: "97% accurate leak localization. No physical sensors underground.",
-    body: "AquaClot™ Detect uses a digital twin of your pipe network — built from EPANET hydraulic simulation — combined with a KNN machine learning algorithm trained on pressure anomaly signatures. We identify the leaking pipe segment without drilling a single access hole.",
+    body: "Pi-Patch™ Detect uses a digital twin of your pipe network — built from EPANET hydraulic simulation — combined with a KNN machine learning algorithm trained on pressure anomaly signatures. We identify the leaking pipe segment without drilling a single access hole.",
   },
   features: [
     {

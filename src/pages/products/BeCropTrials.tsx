@@ -3,13 +3,13 @@ import { ClipboardCheck, Gauge, FileText } from "lucide-react";
 
 const validateData: ProductPageData = {
   hero: {
-    eyebrow: "AquaClot™ Validate",
+    eyebrow: "Pi-Patch™ Validate",
     heading: "Proof Built Into Every Repair.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
     heading: "A 15-minute hydrostatic test closes every job. No proof, no invoice.",
-    body: "Trust is built with data, not promises. After every AquaClot™ Seal deployment, we run an automated 15-minute hydrostatic pressure test on the sealed segment. The line must hold at 1.5× operational pressure before we declare the job complete. The result is logged, timestamped, and delivered to you.",
+    body: "Trust is built with data, not promises. After every Pi-Patch™ Seal deployment, we run an automated 15-minute hydrostatic pressure test on the sealed segment. The line must hold at 1.5× operational pressure before we declare the job complete. The result is logged, timestamped, and delivered to you.",
   },
   features: [
     {
@@ -29,7 +29,7 @@ const validateData: ProductPageData = {
     }
   ],
   steps: [
-    { number: "1", title: "Seal", body: "AquaClot™ Seal completes the bio-sealant injection on the identified pipe segment." },
+    { number: "1", title: "Seal", body: "Pi-Patch™ Seal completes the bio-sealant injection on the identified pipe segment." },
     { number: "2", title: "Pressurize", body: "The segment is isolated and pressurized to 1.5× operational PSI using our calibrated test equipment." },
     { number: "3", title: "Certify", body: "A 15-minute hold period with automated logging confirms the seal. A timestamped certificate is generated on-site." },
   ],

@@ -22,19 +22,19 @@ const municipalPartnersData: AudiencePageData = {
   ],
   solution: {
     heading: "Seal networks at scale. No trenches. No traffic stops. Full audit trail.",
-    body: "AquaClot's KNN model integrates with EPANET-based digital twin simulations of your entire network, identifying the highest-priority leak segments first. Our bio-sealant is food-grade certified and compliant with municipal sewer disposal regulations. Every repair is documented and ready for regulatory reporting.",
+    body: "Pi-Patch's KNN model integrates with EPANET-based digital twin simulations of your entire network, identifying the highest-priority leak segments first. Our bio-sealant is food-grade certified and compliant with municipal sewer disposal regulations. Every repair is documented and ready for regulatory reporting.",
   },
   products: [
     {
-      eyebrow: "AquaClot™ Report",
+      eyebrow: "Pi-Patch™ Report",
       name: "Compliance-Ready Documentation",
       description: "Full pre/post pressure logs, material safety data, and environmental certification per repair.",
-      href: "/aquaclot-report",
+      href: "/pi-patch-report",
       image: ""
     }
   ],
   testimonial: {
-    quote: "AquaClot sealed three subterranean segments in our district cooling network without a single street closure.",
+    quote: "Pi-Patch sealed three subterranean segments in our district cooling network without a single street closure.",
     author: "Municipal Infrastructure Authority",
     role: "Baku, Azerbaijan",
     image: ""

@@ -16,13 +16,13 @@ export function Initiatives() {
     {
       label: "Radical Transparency",
       headline: "We tell you exactly where our technology works — and where it doesn't.",
-      body: "AquaClot is governed by the Bingham Plastic yield-stress model. We operate exclusively on pinholes and micro-fissures in embedded environments. We openly publish our limitations so that every client can make a fully informed decision.",
+      body: "Pi-Patch is governed by the Bingham Plastic yield-stress model. We operate exclusively on pinholes and micro-fissures in embedded environments. We openly publish our limitations so that every client can make a fully informed decision.",
       cta: { label: "See Our Constraints →", href: "/technology" },
     },
     {
       label: "$14 Billion Market",
       headline: "We're disrupting a global market that hasn't changed its methods in 50 years.",
-      body: "From aging Soviet-era apartment blocks to modern commercial towers, the demand for non-destructive pipe repair is global, urgent, and massively underserved. AquaClot is positioned to lead the infrastructure healing category.",
+      body: "From aging Soviet-era apartment blocks to modern commercial towers, the demand for non-destructive pipe repair is global, urgent, and massively underserved. Pi-Patch is positioned to lead the infrastructure healing category.",
       cta: { label: "Investor Relations →", href: "/contact" },
     },
   ];
@@ -35,7 +35,7 @@ export function Initiatives() {
             Why It Matters
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary uppercase tracking-tight max-w-3xl">
-            Three reasons AquaClot changes everything.
+            Three reasons Pi-Patch changes everything.
           </h2>
           <div className="w-12 h-[3px] rounded-full bg-brand-green mt-4" />
         </div>

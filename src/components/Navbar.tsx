@@ -13,10 +13,10 @@ const navLinks: NavLink[] = [
     label: "Solutions",
     dropdown: {
       items: [
-        { label: "AquaClot™ Detect",   href: "/aquaclot-detect" },
-        { label: "AquaClot™ Seal",     href: "/aquaclot-seal" },
-        { label: "AquaClot™ Validate", href: "/aquaclot-validate" },
-        { label: "AquaClot™ Report",   href: "/aquaclot-report" },
+        { label: "Pi-Patch™ Detect",   href: "/pi-patch-detect" },
+        { label: "Pi-Patch™ Seal",     href: "/pi-patch-seal" },
+        { label: "Pi-Patch™ Validate", href: "/pi-patch-validate" },
+        { label: "Pi-Patch™ Report",   href: "/pi-patch-report" },
         { label: "Property Managers",  href: "/property-managers" },
         { label: "Facility Operators", href: "/facility-operators" },
         { label: "Municipal Partners", href: "/municipal-partners" },
@@ -95,7 +95,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl tracking-tight z-50">
             <Droplet className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
-            <span className="hidden sm:inline tracking-tight">AquaClot</span>
+            <span className="hidden sm:inline tracking-tight">Pi-Patch</span>
           </Link>
 
           {/* Desktop Nav */}

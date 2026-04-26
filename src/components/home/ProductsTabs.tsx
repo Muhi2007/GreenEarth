@@ -10,35 +10,35 @@ export function ProductsTabs() {
   const products = [
     {
       id: "detect",
-      name: "AquaClot™ Detect",
+      name: "Pi-Patch™ Detect",
       tagline: "Find It Before You Fix It",
       description:
         "Digital twin simulation via EPANET combined with KNN machine learning pinpoints the exact leaking segment across your pipe network — without a single physical underground sensor.",
-      href: "/aquaclot-detect",
+      href: "/pi-patch-detect",
     },
     {
       id: "seal",
-      name: "AquaClot™ Seal",
+      name: "Pi-Patch™ Seal",
       tagline: "The 5-Second Repair",
       description:
         "Our bio-sealant liquid is injected into the live, wet pipe. It flows normally until it exits the crack, where external calcium triggers instant cross-linking into a pressure-resistant hydrogel plug.",
-      href: "/aquaclot-seal",
+      href: "/pi-patch-seal",
     },
     {
       id: "validate",
-      name: "AquaClot™ Validate",
+      name: "Pi-Patch™ Validate",
       tagline: "Proof, Not Promises",
       description:
         "Every repair concludes with an automated 15-minute hydrostatic pressure test. Mathematical proof that the line is sealed — logged, timestamped, and delivered to you.",
-      href: "/aquaclot-validate",
+      href: "/pi-patch-validate",
     },
     {
       id: "report",
-      name: "AquaClot™ Report",
+      name: "Pi-Patch™ Report",
       tagline: "Transparent Impact Documentation",
       description:
         "Full repair documentation including pre/post pressure data, material usage logs, and environmental compliance certification — ready for insurance, auditors, or municipal reporting.",
-      href: "/aquaclot-report",
+      href: "/pi-patch-report",
     },
   ];
 
@@ -52,7 +52,7 @@ export function ProductsTabs() {
             Our Solutions
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary uppercase tracking-tight">
-            The AquaClot™ Suite
+            The Pi-Patch™ Suite
           </h2>
         </div>
 

@@ -22,19 +22,19 @@ const facilityOperatorsData: AudiencePageData = {
   ],
   solution: {
     heading: "Zero downtime. Full documentation. Complete peace of mind.",
-    body: "AquaClot integrates with your SCADA system or deploys temporary pressure sensors to localize the leak segment. Our bio-sealant is injected into the live pipe during off-peak hours — no shutdown required. A 15-minute hydrostatic test validates the seal before we leave.",
+    body: "Pi-Patch integrates with your SCADA system or deploys temporary pressure sensors to localize the leak segment. Our bio-sealant is injected into the live pipe during off-peak hours — no shutdown required. A 15-minute hydrostatic test validates the seal before we leave.",
   },
   products: [
     {
-      eyebrow: "AquaClot™ Seal",
+      eyebrow: "Pi-Patch™ Seal",
       name: "Repair the Pipe, Not the Building",
       description: "Live-pipe injection of food-grade Sodium Alginate + Nanocellulose — seals in 5 seconds.",
-      href: "/aquaclot-seal",
+      href: "/pi-patch-seal",
       image: ""
     }
   ],
   testimonial: {
-    quote: "AquaClot repaired our HVAC chilled water loop overnight. Operations resumed the next morning without a single complaint.",
+    quote: "Pi-Patch repaired our HVAC chilled water loop overnight. Operations resumed the next morning without a single complaint.",
     author: "Rauf Mammadov",
     role: "Facilities Director, Commercial Tower, Baku",
     image: ""

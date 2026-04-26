@@ -5,28 +5,28 @@ import { ScanSearch, Droplet, ClipboardCheck, FileArchive, ArrowRight } from "lu
 export function Solutions() {
   const products = [
     {
-      name: "AquaClot™ Detect",
+      name: "Pi-Patch™ Detect",
       desc: "Digital twin simulation + KNN machine learning pinpoints the exact leaking pipe segment with 97% accuracy. No underground sensors.",
       icon: <ScanSearch className="w-6 h-6" />,
-      href: "/aquaclot-detect"
+      href: "/pi-patch-detect"
     },
     {
-      name: "AquaClot™ Seal",
+      name: "Pi-Patch™ Seal",
       desc: "Food-grade bio-sealant injected into the live pipe. Seals in under 5 seconds on contact with surrounding calcium. No shutdown needed.",
       icon: <Droplet className="w-6 h-6" />,
-      href: "/aquaclot-seal"
+      href: "/pi-patch-seal"
     },
     {
-      name: "AquaClot™ Validate",
+      name: "Pi-Patch™ Validate",
       desc: "Automated 15-minute hydrostatic pressure test validates every repair. Timestamped, logged, and certified before we leave the site.",
       icon: <ClipboardCheck className="w-6 h-6" />,
-      href: "/aquaclot-validate"
+      href: "/pi-patch-validate"
     },
     {
-      name: "AquaClot™ Report",
+      name: "Pi-Patch™ Report",
       desc: "Full repair documentation — pre/post pressure data, material safety logs, environmental compliance certificate — ready for auditors.",
       icon: <FileArchive className="w-6 h-6" />,
-      href: "/aquaclot-report"
+      href: "/pi-patch-report"
     }
   ];
 

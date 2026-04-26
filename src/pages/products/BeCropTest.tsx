@@ -3,13 +3,13 @@ import { Droplet, Timer, ShieldCheck } from "lucide-react";
 
 const sealData: ProductPageData = {
   hero: {
-    eyebrow: "AquaClot™ Seal",
+    eyebrow: "Pi-Patch™ Seal",
     heading: "Liquid In. Sealed Out.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
     heading: "A food-grade suspension that seals the moment it finds the crack.",
-    body: "AquaClot™ Seal is our core bio-sealant technology. A proprietary blend of Sodium Alginate and Nanocellulose flows freely through your live, pressurized pipe. The moment it exits through a crack and contacts calcium in surrounding concrete, it cross-links instantly into a 50 kPa hydrogel plug — in under 5 seconds.",
+    body: "Pi-Patch™ Seal is our core bio-sealant technology. A proprietary blend of Sodium Alginate and Nanocellulose flows freely through your live, pressurized pipe. The moment it exits through a crack and contacts calcium in surrounding concrete, it cross-links instantly into a 50 kPa hydrogel plug — in under 5 seconds.",
   },
   features: [
     {

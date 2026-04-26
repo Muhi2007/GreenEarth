@@ -28,7 +28,7 @@ export function Mission() {
               78% of urban water leaks come from micro-fissures in embedded pipes — behind bathroom tiles, under concrete slabs, beneath city streets. Today's fix is a sledgehammer. Ours is a liquid.
             </p>
             <p className="text-base text-text-muted leading-relaxed">
-              Traditional excavation costs anywhere from $500 to $15,000+ and causes days of operational downtime. Current trenchless solutions require bone-dry pipes, take 24 hours to cure, and cannot navigate 90-degree bends in indoor plumbing. We built AquaClot to change that — permanently.
+              Traditional excavation costs anywhere from $500 to $15,000+ and causes days of operational downtime. Current trenchless solutions require bone-dry pipes, take 24 hours to cure, and cannot navigate 90-degree bends in indoor plumbing. We built Pi-Patch to change that — permanently.
             </p>
           </div>
         </div>
