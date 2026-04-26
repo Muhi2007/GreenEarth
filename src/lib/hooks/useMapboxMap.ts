@@ -17,7 +17,7 @@ export function useMapboxMap() {
 
     mapRef.current = new maplibregl.Map({
       container: containerRef.current,
-      style: "https://demotiles.maplibre.org/style.json",
+      style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
       ...INITIAL_VIEW,
       antialias: true,
     });

@@ -81,6 +81,10 @@ export function Navbar() {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
+  // Dynamic nav text color based on background
+  const navTextColor = scrolled ? "text-text-inverse" : "text-text-primary";
+  const logoColor = scrolled ? "text-white" : "text-text-primary";
+
   return (
     <>
       <header
@@ -93,13 +97,13 @@ export function Navbar() {
       >
         <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl tracking-tight z-50">
+          <Link to="/" className={cn("flex items-center gap-2 font-bold text-xl tracking-tight z-50", logoColor)}>
             <Droplet className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
             <span className="hidden sm:inline tracking-tight">Pi-Patch</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="nav-desktop hidden lg:flex items-center gap-8 text-sm font-semibold text-text-inverse tracking-wide">
+          <nav className={cn("nav-desktop hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide", navTextColor)}>
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div
@@ -126,7 +130,7 @@ export function Navbar() {
                           key={item.label}
                           to={item.href}
                           onClick={() => setOpenMenu(null)}
-                          className="block px-4 py-2.5 text-sm text-text-muted hover:text-white hover:bg-white/5 transition-colors"
+                          className="block px-4 py-2.5 text-sm text-white hover:text-white hover:bg-white/5 transition-colors"
                         >
                           {item.label}
                         </Link>
@@ -150,7 +154,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-6">
             <Link
               to="/login"
-              className="text-sm font-semibold text-text-inverse hover:text-brand-green-light transition-colors"
+              className={cn("text-sm font-semibold hover:text-brand-green-light transition-colors", navTextColor)}
             >
               Login
             </Link>
