@@ -1,5 +1,23 @@
 import type { Anomaly, PipeNetwork, SensorReading } from "@/components/portal/types";
 
+// Helper function to interpolate a point along a line segment
+function getPointOnLineSegment(
+  [lng1, lat1]: [number, number],
+  [lng2, lat2]: [number, number],
+  ratio: number
+): [number, number] {
+  const lng = lng1 + (lng2 - lng1) * ratio;
+  const lat = lat1 + (lat2 - lat1) * ratio;
+  return [lng, lat];
+}
+
+// Helper function to get a random point on a pipe route
+function getRandomPointOnPipe(coordinates: [number, number][]): [number, number] {
+  const segmentIndex = Math.floor(Math.random() * (coordinates.length - 1));
+  const ratio = Math.random();
+  return getPointOnLineSegment(coordinates[segmentIndex], coordinates[segmentIndex + 1], ratio);
+}
+
 function buildMockPipes(): PipeNetwork {
   return {
     type: "FeatureCollection",
@@ -46,75 +64,172 @@ function buildMockPipes(): PipeNetwork {
           last_updated: new Date().toISOString(),
         },
       },
+      {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [49.855, 40.395],
+            [49.862, 40.399],
+            [49.869, 40.405],
+            [49.875, 40.411],
+          ],
+        },
+        properties: {
+          pipe_id: "PIPE-0103",
+          diameter_mm: 200,
+          material: "cast iron",
+          install_year: 1995,
+          pressure_kpa: 280,
+          flow_rate: 3.2,
+          health_score: 0.65,
+          last_updated: new Date().toISOString(),
+        },
+      },
+      {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [49.848, 40.418],
+            [49.855, 40.422],
+            [49.863, 40.425],
+            [49.871, 40.421],
+          ],
+        },
+        properties: {
+          pipe_id: "PIPE-0115",
+          diameter_mm: 120,
+          material: "PVC",
+          install_year: 2008,
+          pressure_kpa: 310,
+          flow_rate: 2.1,
+          health_score: 0.88,
+          last_updated: new Date().toISOString(),
+        },
+      },
+      {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [49.875, 40.395],
+            [49.879, 40.401],
+            [49.882, 40.408],
+            [49.88, 40.415],
+          ],
+        },
+        properties: {
+          pipe_id: "PIPE-0162",
+          diameter_mm: 150,
+          material: "steel",
+          install_year: 1998,
+          pressure_kpa: 305,
+          flow_rate: 2.7,
+          health_score: 0.72,
+          last_updated: new Date().toISOString(),
+        },
+      },
+      {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [49.845, 40.402],
+            [49.851, 40.408],
+            [49.857, 40.413],
+            [49.863, 40.417],
+          ],
+        },
+        properties: {
+          pipe_id: "PIPE-0198",
+          diameter_mm: 110,
+          material: "PVC",
+          install_year: 2005,
+          pressure_kpa: 290,
+          flow_rate: 1.9,
+          health_score: 0.81,
+          last_updated: new Date().toISOString(),
+        },
+      },
     ],
   };
 }
 
 function buildMockSensors(): SensorReading[] {
-  return [
-    {
-      sensor_id: "SEN-112",
-      pipe_id: "PIPE-0042",
-      lat: 40.412,
-      lng: 49.8671,
-      pressure_kpa: 280,
-      flow_lps: 1.7,
-      status: "leak",
-      severity: 0.87,
-      timestamp: new Date().toISOString(),
-    },
-    {
-      sensor_id: "SEN-203",
-      pipe_id: "PIPE-0078",
-      lat: 40.4085,
-      lng: 49.871,
-      pressure_kpa: 301,
-      flow_lps: 2.1,
-      status: "warning",
-      severity: 0.52,
-      timestamp: new Date().toISOString(),
-    },
-    {
-      sensor_id: "SEN-247",
-      pipe_id: "PIPE-0078",
-      lat: 40.4102,
-      lng: 49.8616,
-      pressure_kpa: 339,
-      flow_lps: 2.6,
-      status: "normal",
-      severity: 0.12,
-      timestamp: new Date().toISOString(),
-    },
-  ];
+  const pipes = buildMockPipes();
+  const sensors: SensorReading[] = [];
+  let sensorId = 100;
+
+  // Generate 2-3 sensors per pipe
+  pipes.features.forEach((feature) => {
+    const pipeId = feature.properties.pipe_id;
+    const coordinates = (feature.geometry as any).coordinates as [number, number][];
+    const sensorCount = 2 + Math.floor(Math.random() * 2);
+
+    for (let i = 0; i < sensorCount; i++) {
+      const [lng, lat] = getRandomPointOnPipe(coordinates);
+      const statuses = ["normal", "warning", "leak"] as const;
+      const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+      sensors.push({
+        sensor_id: `SEN-${sensorId++}`,
+        pipe_id: pipeId,
+        lat,
+        lng,
+        pressure_kpa: 250 + Math.random() * 100,
+        flow_lps: 1.5 + Math.random() * 3,
+        status,
+        severity: status === "normal" ? Math.random() * 0.3 : 0.4 + Math.random() * 0.6,
+        timestamp: new Date().toISOString(),
+      });
+    }
+  });
+
+  return sensors;
 }
 
 function buildMockAnomalies(): Anomaly[] {
-  return [
-    {
-      anomaly_id: "ANO-001",
-      pipe_id: "PIPE-0042",
-      sensor_id: "SEN-112",
-      lat: 40.412,
-      lng: 49.8671,
-      type: "confirmed_leak",
-      severity: 0.87,
+  const pipes = buildMockPipes();
+  const anomalies: Anomaly[] = [];
+  let anomalyId = 1;
+
+  // Generate anomalies on random positions within pipes
+  const anomalyCount = 4 + Math.floor(Math.random() * 3);
+
+  for (let i = 0; i < anomalyCount; i++) {
+    const randomPipeIndex = Math.floor(Math.random() * pipes.features.length);
+    const feature = pipes.features[randomPipeIndex];
+    const pipeId = feature.properties.pipe_id;
+    const coordinates = (feature.geometry as any).coordinates as [number, number][];
+
+    const [lng, lat] = getRandomPointOnPipe(coordinates);
+    const types = ["confirmed_leak", "pressure_drop", "flow_anomaly"] as const;
+    const type = types[Math.floor(Math.random() * types.length)];
+    const severity = 0.5 + Math.random() * 0.45;
+
+    anomalies.push({
+      anomaly_id: `ANO-${String(anomalyId).padStart(3, "0")}`,
+      pipe_id: pipeId,
+      sensor_id: `SEN-${100 + i}`,
+      lat,
+      lng,
+      type,
+      severity,
       detected_at: new Date().toISOString(),
-      description: "Pressure drop of 42% below nominal.",
+      description:
+        type === "confirmed_leak"
+          ? `Confirmed leak detected with ${(severity * 100).toFixed(0)}% confidence.`
+          : type === "pressure_drop"
+            ? `Pressure drop of ${(severity * 50).toFixed(0)}% below nominal.`
+            : `Flow anomaly detected with ${(severity * 100).toFixed(0)}% severity.`,
       is_active: true,
-    },
-    {
-      anomaly_id: "ANO-002",
-      pipe_id: "PIPE-0078",
-      sensor_id: "SEN-203",
-      lat: 40.4085,
-      lng: 49.871,
-      type: "pressure_drop",
-      severity: 0.52,
-      detected_at: new Date().toISOString(),
-      description: "Gradual pressure decline over last 4 hours.",
-      is_active: true,
-    },
-  ];
+    });
+
+    anomalyId++;
+  }
+
+  return anomalies;
 }
 
 async function withLatency<T>(payload: T): Promise<T> {
