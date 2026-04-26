@@ -1,4 +1,4 @@
-import { X, Leaf } from "lucide-react";
+import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MobileNavItem, NavLink } from "./MobileNavItem";
@@ -34,8 +34,8 @@ export function MobileDrawer({ isOpen, onClose, navLinks }: MobileDrawerProps) {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <Link to="/" onClick={onClose} className="flex items-center gap-2 font-bold text-xl tracking-tight text-gray-900">
-            <Leaf className="w-6 h-6 text-brand-green fill-brand-green" />
-            <span>BioSoil</span>
+            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-8 w-auto" />
+            <span>Pi-Patch</span>
           </Link>
           <button
             onClick={onClose}

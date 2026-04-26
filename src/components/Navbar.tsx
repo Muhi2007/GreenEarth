@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Droplet, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
@@ -92,13 +92,13 @@ export function Navbar() {
           "fixed top-0 w-full z-50 transition-all duration-300 h-[72px] flex items-center",
           scrolled
             ? "bg-bg-dark/97 backdrop-blur-[12px] shadow-[0_1px_0_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.25)]"
-            : "bg-transparent"
+            : "bg-bg-dark/20 backdrop-blur-[6px]"
         )}
       >
         <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className={cn("flex items-center gap-2 font-bold text-xl tracking-tight z-50", logoColor)}>
-            <Droplet className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
+            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-8 w-auto" />
             <span className="hidden sm:inline tracking-tight">Pi-Patch</span>
           </Link>
 

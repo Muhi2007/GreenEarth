@@ -19,7 +19,7 @@ export function Audiences() {
     {
       title: "Municipal Partners",
       body: "Metro cooling lines, subterranean networks, and public infrastructure sealed without stopping operations or excavating streets.",
-      image: "https://images.unsplash.com/photo-1518600506278-4e844b207e3c?q=80&w=600&auto=format&fit=crop",
+      image: "/images/partners.png",
       href: "/municipal-partners",
     },
   ];

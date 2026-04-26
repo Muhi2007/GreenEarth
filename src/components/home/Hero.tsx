@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
@@ -103,9 +104,11 @@ export function Hero() {
           <Button size="lg" className="w-full sm:w-auto px-8 border border-white !bg-transparent !text-white hover:!bg-white hover:!text-bg-dark transition-colors btn">
             See How It Works
           </Button>
-          <Button size="lg" variant="ghost" className="text-white hover:text-white hover:bg-white/10 w-full sm:w-auto px-8 group btn">
-            Partner With Us <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/contact" className="w-full sm:w-auto">
+            <Button size="lg" variant="ghost" className="text-white hover:text-white hover:bg-white/10 w-full sm:w-auto px-8 group btn">
+              Partner With Us <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
 
