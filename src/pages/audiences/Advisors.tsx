@@ -1,56 +1,56 @@
 import { AudiencePageTemplate, AudiencePageData } from "@/components/templates/AudiencePageTemplate";
 
-const advisorsData: AudiencePageData = {
+const facilityOperatorsData: AudiencePageData = {
   hero: {
-    heading: "Precise farm management recommendations",
-    subheading: "Differentiate your agronomic services with the world's most advanced soil biological database.",
-    image: "https://images.unsplash.com/photo-1581579207000-a6e2e50523be?q=80&w=2000&auto=format&fit=crop",
+    heading: "Repair Around Your Schedule.",
+    subheading: "HVAC lines, cooling loops, and foundation pipes repaired with zero operational downtime. We work around your business hours, not against them.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
   },
   painPoints: [
     {
-      title: "Client Retention",
-      body: "Farmers demand results. If a recommended program fails due to unseen soil issues, it risks the advisory relationship."
+      title: "Operational Disruption",
+      body: "Shutting down an HVAC system or cooling loop for days to allow excavation and epoxy curing is simply not an option for most commercial facilities."
     },
     {
-      title: "Incomplete Diagnostics",
-      body: "Standard chemical soil tests only tell half the story. You need biological context to explain nutrient lock-up."
+      title: "Hidden Infrastructure",
+      body: "Commercial pipe networks run behind finished ceilings, under concrete slabs, and through structural columns. Traditional access means expensive, destructive work."
     },
     {
-      title: "Trial and Error",
-      body: "Recommending new biologicals without predicting how they will interact with native soil flora is risky."
+      title: "Compliance Liability",
+      body: "Water damage from undetected micro-fissures can trigger mold remediation requirements, insurance claims, and regulatory penalties."
     }
   ],
   solution: {
-    heading: "Elevate your agronomic expertise.",
-    body: "Equip yourself with BeCrop data to offer precision recommendations that consistently succeed. See the complete biological, chemical, and physical picture.",
+    heading: "Zero downtime. Full documentation. Complete peace of mind.",
+    body: "AquaClot integrates with your SCADA system or deploys temporary pressure sensors to localize the leak segment. Our bio-sealant is injected into the live pipe during off-peak hours — no shutdown required. A 15-minute hydrostatic test validates the seal before we leave.",
   },
   products: [
     {
-      eyebrow: "BeCrop Test",
-      name: "Diagnostic Deep Dive",
-      description: "Uncover hidden diseases and nutrient pathways.",
-      href: "/becrop-test",
+      eyebrow: "AquaClot™ Seal",
+      name: "Repair the Pipe, Not the Building",
+      description: "Live-pipe injection of food-grade Sodium Alginate + Nanocellulose — seals in 5 seconds.",
+      href: "/aquaclot-seal",
       image: ""
     }
   ],
   testimonial: {
-    quote: "With BeCrop data, I don't just guess what biologicals to apply; I prescribe them based on hard data.",
-    author: "Sarah Jenkins",
-    role: "Certified Crop Advisor",
+    quote: "AquaClot repaired our HVAC chilled water loop overnight. Operations resumed the next morning without a single complaint.",
+    author: "Rauf Mammadov",
+    role: "Facilities Director, Commercial Tower, Baku",
     image: ""
   },
   caseStudy: {
-    headline: "Increased client retention by providing proactive disease management strategies.",
-    result: "100% Retention",
+    headline: "HVAC cooling line repaired beneath a commercial slab in 4 hours — reducing a 3-day shutdown to zero.",
+    result: "3-day → 4hr",
     href: "/case-studies"
   },
   cta: {
-    heading: "Become a certified BeCrop Advisor.",
-    buttonLabel: "Join the BCA Program",
+    heading: "Repair infrastructure without stopping operations.",
+    buttonLabel: "Book a Commercial Assessment",
     href: "/contact"
   }
 };
 
 export function Advisors() {
-  return <AudiencePageTemplate data={advisorsData} />;
+  return <AudiencePageTemplate data={facilityOperatorsData} />;
 }

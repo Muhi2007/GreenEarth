@@ -1,62 +1,50 @@
 import { ProductPageTemplate, ProductPageData } from "@/components/templates/ProductPageTemplate";
-import { CircleDot, FlaskConical, Target } from "lucide-react";
+import { ClipboardCheck, Gauge, FileText } from "lucide-react";
 
-const trialsData: ProductPageData = {
+const validateData: ProductPageData = {
   hero: {
-    eyebrow: "BeCrop® Trials",
-    heading: "Performance validation for biological inputs",
-    image: "https://images.unsplash.com/photo-1581579207000-a6e2e50523be?q=80&w=2000&auto=format&fit=crop",
+    eyebrow: "AquaClot™ Validate",
+    heading: "Proof Built Into Every Repair.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
-    heading: "Data-driven efficacy reporting",
-    body: "BeCrop Trials provides independent, scientific validation of agricultural inputs. Demonstrate the exact biological mechanisms and performance of your products on soil health.",
+    heading: "A 15-minute hydrostatic test closes every job. No proof, no invoice.",
+    body: "Trust is built with data, not promises. After every AquaClot™ Seal deployment, we run an automated 15-minute hydrostatic pressure test on the sealed segment. The line must hold at 1.5× operational pressure before we declare the job complete. The result is logged, timestamped, and delivered to you.",
   },
   features: [
     {
-      icon: <FlaskConical className="w-8 h-8" />,
-      title: "Standardized Methodology",
-      body: "Ensure consistency across global fields with our scientifically rigorous trial protocols."
+      icon: <Gauge className="w-8 h-8" />,
+      title: "Hydrostatic Pressure Test",
+      body: "We pressurize the sealed pipe segment to 1.5× operating pressure and hold for 15 minutes. Zero pressure loss = confirmed seal."
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Mechanism of Action",
-      body: "Prove exactly how your product affects soil biology, nutrient pathways, and specific pathogen suppression."
+      icon: <ClipboardCheck className="w-8 h-8" />,
+      title: "Automated Logging",
+      body: "Pressure readings are logged every 30 seconds throughout the test window. The full dataset is attached to your repair report automatically."
     },
     {
-      icon: <CircleDot className="w-8 h-8" />,
-      title: "Market Access",
-      body: "Use verified data to support regulatory claims and build trust with distributors and farmers."
+      icon: <FileText className="w-8 h-8" />,
+      title: "Timestamped Certificate",
+      body: "You receive a digitally signed validation certificate suitable for insurance claims, property records, and municipal compliance submissions."
     }
   ],
   steps: [
-    {
-      number: "1",
-      title: "Design",
-      body: "Work with our experts to design a trial protocol that isolates the effect of your input."
-    },
-    {
-      number: "2",
-      title: "Execute",
-      body: "Run field or greenhouse trials, sampling treated and untreated zones."
-    },
-    {
-      number: "3",
-      title: "Analyze",
-      body: "Receive a comprehensive BeCrop Trials Report validating product efficacy."
-    }
+    { number: "1", title: "Seal", body: "AquaClot™ Seal completes the bio-sealant injection on the identified pipe segment." },
+    { number: "2", title: "Pressurize", body: "The segment is isolated and pressurized to 1.5× operational PSI using our calibrated test equipment." },
+    { number: "3", title: "Certify", body: "A 15-minute hold period with automated logging confirms the seal. A timestamped certificate is generated on-site." },
   ],
   caseStudy: {
-    headline: "Proved the efficacy of a new biostimulant, leading to a successful global launch.",
-    result: "Verified Efficacy",
+    headline: "Every residential repair validated to 1.5× PSI before client sign-off — 100% first-pass seal rate to date.",
+    result: "100% Pass Rate",
     href: "/case-studies"
   },
   cta: {
-    heading: "Ready to validate your biological product?",
-    buttonLabel: "Get Started with BeCrop® Trials",
+    heading: "Every repair we do comes with proof.",
+    buttonLabel: "Book with Validation Included",
     href: "/contact"
   }
 };
 
 export function BeCropTrials() {
-  return <ProductPageTemplate data={trialsData} />;
+  return <ProductPageTemplate data={validateData} />;
 }

@@ -82,7 +82,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold text-white mb-6 leading-[1.1] tracking-tighter uppercase"
         >
-          Decoding <br className="hidden sm:block" />Soil Biology
+          We Heal Pipes.<br className="hidden sm:block" /> Not Walls.
         </motion.h1>
         
         <motion.p 
@@ -91,7 +91,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-text-inverse mb-10 max-w-2xl mx-auto font-normal leading-relaxed text-balance italic font-serif"
         >
-          Actionable soil intelligence optimizing crop yields and soil health through the world's most advanced agricultural microbiome data platform.
+          Autonomous fluidic repair technology that seals embedded leaks in under 5 seconds — no excavation, no downtime, no demolition.
         </motion.p>
         
         <motion.div 
@@ -100,11 +100,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
         >
-          <Button size="lg" className="w-full sm:w-auto px-8 border border-white !bg-transparent !text-white hover:!bg-white hover:!text-bg-dark transition-colors">
-            Get a Demo
+          <Button size="lg" className="w-full sm:w-auto px-8 border border-white !bg-transparent !text-white hover:!bg-white hover:!text-bg-dark transition-colors btn">
+            See How It Works
           </Button>
-          <Button size="lg" variant="ghost" className="text-white hover:text-white hover:bg-white/10 w-full sm:w-auto px-8 group">
-            Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
+          <Button size="lg" variant="ghost" className="text-white hover:text-white hover:bg-white/10 w-full sm:w-auto px-8 group btn">
+            Partner With Us <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
       </div>

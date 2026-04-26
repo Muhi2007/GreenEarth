@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Leaf, ChevronDown } from "lucide-react";
+import { Droplet, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
@@ -13,13 +13,13 @@ const navLinks: NavLink[] = [
     label: "Solutions",
     dropdown: {
       items: [
-        { label: "BeCrop® Farm", href: "/becrop-farm" },
-        { label: "BeCrop® Test", href: "/becrop-test" },
-        { label: "BeCrop® Trials", href: "/becrop-trials" },
-        { label: "BeCrop® Rate", href: "/becrop-rate" },
-        { label: "For Farmers", href: "/farmers" },
-        { label: "For Advisors & Retailers", href: "/advisors" },
-        { label: "For Manufacturers", href: "/manufacturer" },
+        { label: "AquaClot™ Detect",   href: "/aquaclot-detect" },
+        { label: "AquaClot™ Seal",     href: "/aquaclot-seal" },
+        { label: "AquaClot™ Validate", href: "/aquaclot-validate" },
+        { label: "AquaClot™ Report",   href: "/aquaclot-report" },
+        { label: "Property Managers",  href: "/property-managers" },
+        { label: "Facility Operators", href: "/facility-operators" },
+        { label: "Municipal Partners", href: "/municipal-partners" },
       ],
     },
   },
@@ -28,9 +28,9 @@ const navLinks: NavLink[] = [
     dropdown: {
       items: [
         { label: "Case Studies", href: "/case-studies" },
-        { label: "Resources", href: "/resources" },
-        { label: "About Us", href: "/about" },
-        { label: "Contact", href: "/contact" },
+        { label: "Resources",    href: "/resources" },
+        { label: "About Us",     href: "/about" },
+        { label: "Contact",      href: "/contact" },
       ],
     },
   },
@@ -94,8 +94,8 @@ export function Navbar() {
         <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl tracking-tight z-50">
-            <Leaf className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
-            <span className="hidden sm:inline tracking-tight">BioSoil</span>
+            <Droplet className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
+            <span className="hidden sm:inline tracking-tight">AquaClot</span>
           </Link>
 
           {/* Desktop Nav */}

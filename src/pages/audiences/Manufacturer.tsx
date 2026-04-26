@@ -1,56 +1,56 @@
 import { AudiencePageTemplate, AudiencePageData } from "@/components/templates/AudiencePageTemplate";
 
-const manufacturerData: AudiencePageData = {
+const municipalPartnersData: AudiencePageData = {
   hero: {
-    heading: "Baseline field data for biological input development",
-    subheading: "Validate the performance of your agricultural inputs with scientific, standardized biological trials.",
-    image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=2000&auto=format&fit=crop",
+    heading: "Infrastructure Healed From Inside.",
+    subheading: "Metro cooling lines, subterranean networks, and public infrastructure sealed without stopping operations or excavating streets.",
+    image: "https://images.unsplash.com/photo-1518600506278-4e844b207e3c?q=80&w=2000&auto=format&fit=crop",
   },
   painPoints: [
     {
-      title: "Proving Efficacy",
-      body: "Market adoption of biologicals requires proof. Vague claims aren't enough for discerning farmers and regulatory bodies."
+      title: "Scale & Complexity",
+      body: "Municipal pipe networks span hundreds of kilometers with countless branch junctions, pressure zones, and embedded segments beneath city streets."
     },
     {
-      title: "Inconsistent Performance",
-      body: "A product works in one region but fails in another. Without biological data, it's impossible to know why."
+      title: "Public Disruption",
+      body: "Excavating city streets to repair a water main causes traffic chaos, business disruption, and public backlash — at a cost to the municipality far exceeding the pipe repair itself."
     },
     {
-      title: "Mechanism of Action",
-      body: "Understanding exactly how your product affects soil ecology is critical for marketing and product iteration."
+      title: "Aging Infrastructure",
+      body: "Soviet-era and early-construction pipes were not built for modern water pressures. Micro-fissures compound silently until catastrophic failure."
     }
   ],
   solution: {
-    heading: "Independent validation powered by the largest global database.",
-    body: "Use BeCrop Trials to scientifically demonstrate the specific mechanisms of your product, validate claims, and build absolute trust in the market.",
+    heading: "Seal networks at scale. No trenches. No traffic stops. Full audit trail.",
+    body: "AquaClot's KNN model integrates with EPANET-based digital twin simulations of your entire network, identifying the highest-priority leak segments first. Our bio-sealant is food-grade certified and compliant with municipal sewer disposal regulations. Every repair is documented and ready for regulatory reporting.",
   },
   products: [
     {
-      eyebrow: "BeCrop Trials",
-      name: "Efficacy Validation",
-      description: "Prove exactly how your product works.",
-      href: "/becrop-trials",
+      eyebrow: "AquaClot™ Report",
+      name: "Compliance-Ready Documentation",
+      description: "Full pre/post pressure logs, material safety data, and environmental certification per repair.",
+      href: "/aquaclot-report",
       image: ""
     }
   ],
   testimonial: {
-    quote: "BeCrop provided the undeniable data we needed to successfully launch our new bio-fungicide in European markets.",
-    author: "Elena Rodriguez",
-    role: "VP of Product, AgBioTech",
+    quote: "AquaClot sealed three subterranean segments in our district cooling network without a single street closure.",
+    author: "Municipal Infrastructure Authority",
+    role: "Baku, Azerbaijan",
     image: ""
   },
   caseStudy: {
-    headline: "Demonstrated a 30% increase in natural phosphorus mobilization across differing climates.",
-    result: "30% Increase",
+    headline: "Subterranean pipe network sealed across 3 segments — zero operational downtime, zero street excavation.",
+    result: "Zero Downtime",
     href: "/case-studies"
   },
   cta: {
-    heading: "Validate your agricultural inputs today.",
-    buttonLabel: "Explore BeCrop® Trials",
+    heading: "Partner with us to heal your city's infrastructure.",
+    buttonLabel: "Municipal Partnership Inquiry",
     href: "/contact"
   }
 };
 
 export function Manufacturer() {
-  return <AudiencePageTemplate data={manufacturerData} />;
+  return <AudiencePageTemplate data={municipalPartnersData} />;
 }

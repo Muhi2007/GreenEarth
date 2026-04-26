@@ -1,19 +1,21 @@
-import { ArrowRight, Database, ShieldCheck } from "lucide-react";
+import { BrainCircuit, Droplet } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function Technology() {
   return (
     <section className="py-24 bg-bg-white border-b border-border">
       <div className="container mx-auto px-5 max-w-7xl">
         <div className="mb-16">
-          <p className="text-brand-green font-bold text-xs uppercase tracking-[0.2em] mb-4">BeCrop® Technology</p>
+          <p className="text-brand-green font-bold text-xs uppercase tracking-[0.2em] mb-4">
+            Biomimetic Engineering
+          </p>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-3 uppercase tracking-tight max-w-3xl">
-            The Global Standard for Soil Health
+            AquaClot™ Technology: How Liquid Becomes a Seal
           </h2>
-          {/* Green accent bar */}
           <div className="w-12 h-[3px] rounded-full bg-brand-green mb-6" />
           <p className="text-lg text-text-muted max-w-2xl font-serif italic leading-relaxed">
-            Our proprietary technology decodes soil biology using advanced DNA sequencing and machine learning, translating complex microbiological data into actionable agronomic indices.
+            AquaClot mimics the human body's blood-clotting mechanism — a liquid that flows freely until it finds the leak, then hardens instantly to seal it. No digging. No waiting. No waste.
           </p>
         </div>
 
@@ -22,32 +24,35 @@ export function Technology() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
           <div className="card-interactive bg-accent-cream p-8 md:p-12 rounded-lg border border-transparent">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm">
-              <Database className="w-6 h-6 text-brand-green" />
+              <BrainCircuit className="w-6 h-6 text-brand-green" />
             </div>
-            <h3 className="text-2xl font-bold text-text-primary mb-4 uppercase tracking-tighter">Largest Database</h3>
-            <p className="text-text-muted text-lg leading-relaxed">
-              Leverage insights from over 55 million microorganisms classified and functionally modeled from agricultural soils worldwide.
+            <h3 className="text-2xl font-bold text-text-primary mb-4 uppercase tracking-tighter">
+              AI-Driven Leak Localization
+            </h3>
+            <p className="text-text-muted text-base leading-relaxed">
+              Our KNN algorithm integrates with existing SCADA systems or temporary pressure sensors, mapping hydraulic anomalies to pinpoint the exact leaking pipe segment with 97% accuracy. No underground sensors required.
             </p>
           </div>
 
           <div className="card-interactive bg-accent-cream p-8 md:p-12 rounded-lg border border-transparent">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm">
-              <ShieldCheck className="w-6 h-6 text-brand-green" />
+              <Droplet className="w-6 h-6 text-brand-green" />
             </div>
-            <h3 className="text-2xl font-bold text-text-primary mb-4 uppercase tracking-tighter">Independent Platform</h3>
-            <p className="text-text-muted text-lg leading-relaxed">
-              An unbiased, scientific approach to evaluating soil health. BeCrop® provides reliable, third-party validation for sustainable farming inputs.
+            <h3 className="text-2xl font-bold text-text-primary mb-4 uppercase tracking-tighter">
+              Biomimetic Fluidic Sealing
+            </h3>
+            <p className="text-text-muted text-base leading-relaxed">
+              A food-grade suspension of Sodium Alginate and Nanocellulose flows through your pipe and self-seals upon contact with calcium in surrounding concrete — forming a 50 kPa hydrogel plug in under 5 seconds.
             </p>
           </div>
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" className="border-border-dark text-text-primary btn">
-            Check out BeCrop® Technology
+          <Button asChild variant="outline" size="lg" className="border-border-dark text-text-primary btn">
+            <Link to="/technology">Explore the Full Technology →</Link>
           </Button>
         </div>
       </div>
     </section>
   );
 }
-

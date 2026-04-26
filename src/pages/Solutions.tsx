@@ -1,42 +1,42 @@
 import { PageHero } from "@/components/sections/PageHero";
 import { Link } from "react-router-dom";
-import { AreaChart, ShieldCheck, CircleDot, BarChart3, ArrowRight } from "lucide-react";
+import { ScanSearch, Droplet, ClipboardCheck, FileArchive, ArrowRight } from "lucide-react";
 
 export function Solutions() {
   const products = [
     {
-      name: "BeCrop® Farm",
-      desc: "Comprehensive farm-level soil biology dashboard to manage plots and compare functional performance.",
-      icon: <AreaChart className="w-6 h-6" />,
-      href: "/becrop-farm"
+      name: "AquaClot™ Detect",
+      desc: "Digital twin simulation + KNN machine learning pinpoints the exact leaking pipe segment with 97% accuracy. No underground sensors.",
+      icon: <ScanSearch className="w-6 h-6" />,
+      href: "/aquaclot-detect"
     },
     {
-      name: "BeCrop® Test",
-      desc: "Standard soil test reporting on biodiversity, nutrient cycling, disease risk, and stress adaptation.",
-      icon: <ShieldCheck className="w-6 h-6" />,
-      href: "/becrop-test"
+      name: "AquaClot™ Seal",
+      desc: "Food-grade bio-sealant injected into the live pipe. Seals in under 5 seconds on contact with surrounding calcium. No shutdown needed.",
+      icon: <Droplet className="w-6 h-6" />,
+      href: "/aquaclot-seal"
     },
     {
-      name: "BeCrop® Trials",
-      desc: "Independent, scientific evaluation of agricultural input efficacy on soil biology.",
-      icon: <CircleDot className="w-6 h-6" />,
-      href: "/becrop-trials"
+      name: "AquaClot™ Validate",
+      desc: "Automated 15-minute hydrostatic pressure test validates every repair. Timestamped, logged, and certified before we leave the site.",
+      icon: <ClipboardCheck className="w-6 h-6" />,
+      href: "/aquaclot-validate"
     },
     {
-      name: "BeCrop® Rate",
-      desc: "A singular metric quantifying the sustainability of agricultural management practices on soil health.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      href: "/becrop-rate"
+      name: "AquaClot™ Report",
+      desc: "Full repair documentation — pre/post pressure data, material safety logs, environmental compliance certificate — ready for auditors.",
+      icon: <FileArchive className="w-6 h-6" />,
+      href: "/aquaclot-report"
     }
   ];
 
   return (
     <div className="bg-bg-white relative">
-      <PageHero 
+      <PageHero
         eyebrow="Solutions"
-        heading="Biological Intelligence for the entire ecosystem"
-        subheading="Whether you are a farmer, advisor, or manufacturer, we have the right tools to unlock the potential of your soil."
-        image="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=2000&auto=format&fit=crop"
+        heading="Stop Breaking Walls. Start Healing Pipes."
+        subheading="Four integrated products. One seamless repair protocol. Zero demolition."
+        image="https://images.unsplash.com/photo-1518600506278-4e844b207e3c?q=80&w=2000&auto=format&fit=crop"
       />
 
       <section className="py-16 md:py-24 bg-bg-section border-y border-border">

@@ -1,62 +1,50 @@
 import { ProductPageTemplate, ProductPageData } from "@/components/templates/ProductPageTemplate";
-import { AreaChart, Eye, LayoutDashboard } from "lucide-react";
+import { ScanSearch, Network, Zap } from "lucide-react";
 
-const farmData: ProductPageData = {
+const detectData: ProductPageData = {
   hero: {
-    eyebrow: "BeCrop® Farm",
-    heading: "Maximize the potential of every acre",
-    image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2000&auto=format&fit=crop",
+    eyebrow: "AquaClot™ Detect",
+    heading: "Find the Leak. Precisely.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
-    heading: "Actionable crop intelligence at scale",
-    body: "BeCrop Farm empowers farmers to connect the dots between soil biology and crop performance. Our dashboard translates complex microbiological data into practical, field-level recommendations.",
+    heading: "97% accurate leak localization. No physical sensors underground.",
+    body: "AquaClot™ Detect uses a digital twin of your pipe network — built from EPANET hydraulic simulation — combined with a KNN machine learning algorithm trained on pressure anomaly signatures. We identify the leaking pipe segment without drilling a single access hole.",
   },
   features: [
     {
-      icon: <LayoutDashboard className="w-8 h-8" />,
-      title: "Interactive Dashboard",
-      body: "Visualize functional soil data across multiple fields and compare crop performance side-by-side."
+      icon: <Network className="w-8 h-8" />,
+      title: "Digital Twin Simulation",
+      body: "We model your entire pipe network using EPANET hydraulic software, creating a pressure-behavior baseline unique to your infrastructure."
     },
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: "Predictive Insights",
-      body: "Anticipate disease risks and nutrient deficiencies before they impact your yield."
+      icon: <ScanSearch className="w-8 h-8" />,
+      title: "KNN Anomaly Detection",
+      body: "Our K-Nearest Neighbors algorithm cross-references real-time pressure readings against the digital twin to identify which segment is leaking — with 97% accuracy."
     },
     {
-      icon: <AreaChart className="w-8 h-8" />,
-      title: "Precision Recommendations",
-      body: "Optimize input applications based on the actual biological needs of your soil."
+      icon: <Zap className="w-8 h-8" />,
+      title: "No Sensor Installation",
+      body: "We integrate with your existing SCADA system or temporarily attach non-invasive pressure loggers. No underground drilling or sensor hardware required."
     }
   ],
   steps: [
-    {
-      number: "1",
-      title: "Sample",
-      body: "Collect robust soil samples from your fields using our standardized kits."
-    },
-    {
-      number: "2",
-      title: "Analyze",
-      body: "Sequencing and machine learning uncover the unique biological profile of your soil."
-    },
-    {
-      number: "3",
-      title: "Act",
-      body: "Access the BeCrop Farm dashboard to view insights and application recommendations."
-    }
+    { number: "1", title: "Map Your Network", body: "We build or import a digital twin of your pipe network using your existing schematics or on-site measurements." },
+    { number: "2", title: "Record Pressure Data", body: "Sensors attach non-invasively at access points and log pressure signatures for 30–60 minutes." },
+    { number: "3", title: "Localize the Leak", body: "Our KNN model pinpoints the exact segment — delivered as a coordinate map, not a guess." },
   ],
   caseStudy: {
-    headline: "Reduced fertilizer input by 20% while maintaining yield through precision biological insights.",
-    result: "20% Reduction",
+    headline: "Leak segment identified in 47 minutes across a 12-unit residential building — no drilling required.",
+    result: "47 min Diagnosis",
     href: "/case-studies"
   },
   cta: {
-    heading: "Ready to unlock the potential of your farm?",
-    buttonLabel: "Get Started with BeCrop® Farm",
+    heading: "Know exactly where the problem is before you fix it.",
+    buttonLabel: "Book a Detection Assessment",
     href: "/contact"
   }
 };
 
 export function BeCropFarm() {
-  return <ProductPageTemplate data={farmData} />;
+  return <ProductPageTemplate data={detectData} />;
 }

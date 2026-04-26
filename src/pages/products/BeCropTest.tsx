@@ -1,62 +1,50 @@
 import { ProductPageTemplate, ProductPageData } from "@/components/templates/ProductPageTemplate";
-import { FileSearch, Microscope, ShieldCheck } from "lucide-react";
+import { Droplet, Timer, ShieldCheck } from "lucide-react";
 
-const testData: ProductPageData = {
+const sealData: ProductPageData = {
   hero: {
-    eyebrow: "BeCrop® Test",
-    heading: "Predictive insights for crop productivity",
-    image: "https://images.unsplash.com/photo-1530836369250-ef81a4b56314?q=80&w=2000&auto=format&fit=crop",
+    eyebrow: "AquaClot™ Seal",
+    heading: "Liquid In. Sealed Out.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop",
   },
   intro: {
-    heading: "The global standard for soil testing",
-    body: "BeCrop Test is a comprehensive assessment of soil biological quality. Discover how your current practices affect nutrient cycling, disease risk, and biodiversity.",
+    heading: "A food-grade suspension that seals the moment it finds the crack.",
+    body: "AquaClot™ Seal is our core bio-sealant technology. A proprietary blend of Sodium Alginate and Nanocellulose flows freely through your live, pressurized pipe. The moment it exits through a crack and contacts calcium in surrounding concrete, it cross-links instantly into a 50 kPa hydrogel plug — in under 5 seconds.",
   },
   features: [
     {
+      icon: <Droplet className="w-8 h-8" />,
+      title: "Biomimetic Chemistry",
+      body: "Modeled on the human blood-clotting cascade — a liquid that flows freely in non-leaking zones and hardens only at the point of exit."
+    },
+    {
+      icon: <Timer className="w-8 h-8" />,
+      title: "5-Second Cure",
+      body: "Contact with calcium ions in surrounding concrete triggers instant cross-linking. No waiting 24 hours for epoxy to cure in a bone-dry pipe."
+    },
+    {
       icon: <ShieldCheck className="w-8 h-8" />,
-      title: "Disease Risk Assessment",
-      body: "Identify potential threats by analyzing the presence of pathogens and biocontrol agents."
-    },
-    {
-      icon: <Microscope className="w-8 h-8" />,
-      title: "Nutrient Cycling Pathways",
-      body: "Understand the microbial pathways responsible for nitrogen, phosphorus, and potassium cycling."
-    },
-    {
-      icon: <FileSearch className="w-8 h-8" />,
-      title: "Actionable Reports",
-      body: "Receive detailed, easy-to-read reports that highlight areas for immediate improvement."
+      title: "50 kPa Hydrogel Plug",
+      body: "The resulting hydrogel withstands standard residential and commercial pipe pressures. Lab-tested at 3× operational PSI."
     }
   ],
   steps: [
-    {
-      number: "1",
-      title: "Sample",
-      body: "Collect a soil sample using the BeCrop kit."
-    },
-    {
-      number: "2",
-      title: "Send",
-      body: "Ship your sample to one of our global partner laboratories."
-    },
-    {
-      number: "3",
-      title: "Discover",
-      body: "Receive a deeply informative soil biology report via the BeCrop portal."
-    }
+    { number: "1", title: "Inject", body: "Bio-sealant is injected at the nearest pipe access point. No pipe shutdown required — the system stays pressurized." },
+    { number: "2", title: "Flow", body: "The liquid travels through your pipe network under normal pressure, unaffected by bends and junctions." },
+    { number: "3", title: "Seal", body: "At the crack, contact with calcium triggers instant hydrogel formation. The pipe is sealed within seconds." },
   ],
   caseStudy: {
-    headline: "Identified hidden pathogen risks, saving the upcoming high-value cash crop.",
-    result: "100% Protection",
+    headline: "Behind-tile bathroom pipe sealed without removing a single tile — repair completed in 2.5 hours.",
+    result: "2.5 hr Repair",
     href: "/case-studies"
   },
   cta: {
-    heading: "Understand your soil like never before.",
-    buttonLabel: "Get Started with BeCrop® Test",
+    heading: "Ready to seal it without breaking anything?",
+    buttonLabel: "Schedule a Seal Assessment",
     href: "/contact"
   }
 };
 
 export function BeCropTest() {
-  return <ProductPageTemplate data={testData} />;
+  return <ProductPageTemplate data={sealData} />;
 }
