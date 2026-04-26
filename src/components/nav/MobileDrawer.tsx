@@ -56,7 +56,7 @@ export function MobileDrawer({ isOpen, onClose, navLinks }: MobileDrawerProps) {
         {/* CTA buttons pinned to bottom */}
         <div className="px-6 py-6 border-t border-gray-100 flex flex-col gap-3">
           <Button asChild className="bg-brand-green text-white hover:bg-brand-green-dark w-full">
-            <Link to="/contact" onClick={onClose}>Get Started</Link>
+            <Link to="/get-started" onClick={onClose}>Get Started</Link>
           </Button>
           <Button asChild variant="outline" className="border-border text-gray-800 hover:bg-gray-50 w-full">
             <Link to="/login" onClick={onClose}>Login</Link>

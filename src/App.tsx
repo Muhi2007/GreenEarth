@@ -18,6 +18,7 @@ import { CaseStudies } from "./pages/CaseStudies";
 import { Resources } from "./pages/Resources";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
+import { GetStarted } from "./pages/GetStarted";
 
 // Placeholder component for unimplemented routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -66,7 +67,7 @@ export default function App() {
           <Route path="case-studies" element={<CaseStudies />} />
           <Route path="careers"      element={<Placeholder title="Careers" />} />
           <Route path="contact"      element={<Contact />} />
-          <Route path="get-started"  element={<Placeholder title="Get Started" />} />
+          <Route path="get-started"  element={<GetStarted />} />
           <Route path="login"        element={<Placeholder title="Login" />} />
           <Route path="*"            element={<Placeholder title="404 - Page Not Found" />} />
         </Route>
