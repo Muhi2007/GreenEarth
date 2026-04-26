@@ -1,0 +1,68 @@
+import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
+import { Button } from "./ui/button";
+
+export function Footer() {
+  return (
+    <footer className="bg-bg-dark border-t border-border-dark text-text-inverse py-16 md:py-24">
+      <div className="container mx-auto px-5 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
+          <div className="lg:col-span-2">
+            <Link to="/" className="flex items-center gap-2 font-bold text-2xl tracking-tight mb-6">
+              <Leaf className="w-8 h-8 text-brand-green-light fill-brand-green-light" />
+              <span>BioSoil</span>
+            </Link>
+            <p className="text-text-muted text-base mb-8 max-w-sm leading-relaxed">
+              Decoding soil biology to provide actionable insights for farmers, advisors, and manufacturers globally.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-brand-green text-white hover:bg-brand-green-dark">
+                Request a Demo
+              </Button>
+              <Button size="lg" variant="outline" className="border-border-dark text-white hover:bg-white hover:text-bg-dark">
+                Contact Us
+              </Button>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-text-inverse mb-6 text-base tracking-wide">Products</h4>
+            <ul className="space-y-4 text-sm font-medium text-text-muted">
+              <li><Link to="/becrop-farm" className="hover:text-white transition-colors">BeCrop® Farm</Link></li>
+              <li><Link to="/becrop-test" className="hover:text-white transition-colors">BeCrop® Test</Link></li>
+              <li><Link to="/becrop-trials" className="hover:text-white transition-colors">BeCrop® Trials</Link></li>
+              <li><Link to="/becrop-rate" className="hover:text-white transition-colors">BeCrop® Rate</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-text-inverse mb-6 text-base tracking-wide">Solutions</h4>
+            <ul className="space-y-4 text-sm font-medium text-text-muted">
+              <li><Link to="/farmers" className="hover:text-white transition-colors">For Farmers</Link></li>
+              <li><Link to="/advisors" className="hover:text-white transition-colors">For Advisors & Retailers</Link></li>
+              <li><Link to="/manufacturer" className="hover:text-white transition-colors">For Manufacturers</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-text-inverse mb-6 text-base tracking-wide">Company</h4>
+            <ul className="space-y-4 text-sm font-medium text-text-muted">
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/resources" className="hover:text-white transition-colors">Resources</Link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-border-dark pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-text-muted">
+          <p>© {new Date().getFullYear()} BioSoil Intelligence Platform. All rights reserved.</p>
+          <div className="flex gap-8">
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

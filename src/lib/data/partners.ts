@@ -1,0 +1,17 @@
+export const partners = [
+  { name: 'BASF', logo: '/logos/partners/basf.png', href: 'https://basf.com' },
+  { name: 'Syngenta', logo: '/logos/partners/syngenta.png', href: 'https://syngenta.com' },
+  { name: 'Bayer', logo: '/logos/partners/bayer.png', href: 'https://bayer.com' },
+  { name: 'Anglo American', logo: '/logos/partners/angloamerican.png', href: '#' },
+  { name: 'UPL', logo: '/logos/partners/upl.png', href: '#' },
+  { name: 'Corteva', logo: '/logos/partners/corteva.png', href: '#' },
+  { name: 'Disagro', logo: '/logos/partners/disagro.png', href: '#' },
+  { name: 'Yara', logo: '/logos/partners/yara.png', href: '#' },
+  { name: 'Regen-Ag', logo: '/logos/partners/regen-ag.png', href: '#' },
+  { name: 'Biovante', logo: '/logos/partners/biovante.png', href: '#' },
+  { name: 'Valagro', logo: '/logos/partners/valagro.png', href: '#' },
+  { name: 'Terra Vesco', logo: '/logos/partners/terra-vesco.png', href: '#' },
+  { name: 'ECOM', logo: '/logos/partners/ecom.png', href: '#' },
+  { name: 'Syntech', logo: '/logos/partners/syntech.png', href: '#' },
+  { name: 'Simplot', logo: '/logos/partners/simplot.png', href: '#' },
+];
