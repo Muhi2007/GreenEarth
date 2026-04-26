@@ -61,11 +61,11 @@ export function Contact() {
                 <div className="space-y-4 text-text-muted">
                   <p>
                     <strong className="text-text-primary">General Inquiries:</strong><br />
-                    info@biomemakers.com
+                    info@pipatch.com
                   </p>
                   <p>
                     <strong className="text-text-primary">Support:</strong><br />
-                    support@biomemakers.com
+                    support@pipatch.com
                   </p>
                 </div>
               </div>
