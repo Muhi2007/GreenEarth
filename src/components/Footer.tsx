@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Droplet } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function Footer() {
@@ -10,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 font-bold text-2xl tracking-tight mb-6">
-              <Droplet className="w-8 h-8 text-brand-green-light fill-brand-green-light" />
+              <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-8 w-auto" />
               <span>Pi-Patch</span>
             </Link>
             <p className="text-text-muted text-base mb-4 max-w-sm leading-relaxed">

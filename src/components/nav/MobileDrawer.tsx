@@ -34,7 +34,7 @@ export function MobileDrawer({ isOpen, onClose, navLinks }: MobileDrawerProps) {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <Link to="/" onClick={onClose} className="flex items-center gap-2 font-bold text-xl tracking-tight text-gray-900">
-            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-8 w-auto" />
+            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-10 w-auto" />
             <span>Pi-Patch</span>
           </Link>
           <button

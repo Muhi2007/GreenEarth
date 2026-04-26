@@ -98,7 +98,7 @@ export function Navbar() {
         <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className={cn("flex items-center gap-2 font-bold text-xl tracking-tight z-50", logoColor)}>
-            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-8 w-auto" />
+            <img src="/images/logo-small.png" alt="Pi-Patch Logo" className="h-10 w-auto" />
             <span className="hidden sm:inline tracking-tight">Pi-Patch</span>
           </Link>
 
