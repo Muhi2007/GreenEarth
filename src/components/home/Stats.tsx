@@ -49,9 +49,15 @@ export function Stats() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-border-dark">
           {stats.map((stat, i) => (
             <div key={i} className="text-center py-12 px-6 flex flex-col items-center">
-              <div className="text-5xl font-bold text-accent-gold mb-2 tracking-tighter">
+              <motion.div
+                className="text-5xl font-bold text-accent-gold mb-2 tracking-tighter"
+                initial={{ opacity: 0, scale: 0.85 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.1 }}
+              >
                 <AnimatedCounter value={stat.value} />{stat.suffix}
-              </div>
+              </motion.div>
               <div className="text-text-inverse font-semibold mb-1 text-base uppercase tracking-widest">{stat.label}</div>
               <div className="text-text-muted text-sm max-w-[200px] mt-2 italic font-serif leading-relaxed">{stat.sublabel}</div>
             </div>
@@ -61,3 +67,4 @@ export function Stats() {
     </section>
   );
 }
+

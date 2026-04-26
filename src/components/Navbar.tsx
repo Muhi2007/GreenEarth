@@ -1,49 +1,175 @@
 import { Link } from "react-router-dom";
-import { Leaf } from "lucide-react";
+import { Leaf, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { BurgerButton } from "./nav/BurgerButton";
+import { MobileDrawer } from "./nav/MobileDrawer";
+import type { NavLink } from "./nav/MobileNavItem";
+
+const navLinks: NavLink[] = [
+  { label: "Technology", href: "/technology" },
+  {
+    label: "Solutions",
+    dropdown: {
+      items: [
+        { label: "BeCrop® Farm", href: "/becrop-farm" },
+        { label: "BeCrop® Test", href: "/becrop-test" },
+        { label: "BeCrop® Trials", href: "/becrop-trials" },
+        { label: "BeCrop® Rate", href: "/becrop-rate" },
+        { label: "For Farmers", href: "/farmers" },
+        { label: "For Advisors & Retailers", href: "/advisors" },
+        { label: "For Manufacturers", href: "/manufacturer" },
+      ],
+    },
+  },
+  {
+    label: "Resources",
+    dropdown: {
+      items: [
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Resources", href: "/resources" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
+      ],
+    },
+  },
+  { label: "Company", href: "/company" },
+];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <header
-      className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 h-[72px] lg:h-[72px] flex items-center",
-        scrolled ? "bg-bg-dark shadow-sm py-0" : "bg-transparent py-0"
-      )}
-    >
-      <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl tracking-tight z-50">
-          <Leaf className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
-          <span className="hidden sm:inline tracking-tight">BioSoil</span>
-        </Link>
-        
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-text-inverse tracking-wide">
-          <Link to="/technology" className="hover:text-brand-green-light transition-colors">Technology</Link>
-          <Link to="/solutions" className="hover:text-brand-green-light transition-colors flex items-center gap-1">Solutions <span className="text-[10px]">▼</span></Link>
-          <Link to="/resources" className="hover:text-brand-green-light transition-colors flex items-center gap-1">Resources <span className="text-[10px]">▼</span></Link>
-          <Link to="/company" className="hover:text-brand-green-light transition-colors">Company</Link>
-        </nav>
+  // Body scroll lock when drawer open
+  useEffect(() => {
+    if (drawerOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [drawerOpen]);
 
-        <div className="hidden lg:flex items-center gap-6">
-          <Link to="/login" className="text-sm font-semibold text-text-inverse hover:text-brand-green-light transition-colors">Login</Link>
-          <Button asChild className="bg-brand-green text-white hover:bg-brand-green-dark">
-            <Link to="/get-started">Get Started</Link>
-          </Button>
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpenMenu(null);
+        setDrawerOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  const handleMouseEnter = (menuId: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu(menuId);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
+  };
+
+  return (
+    <>
+      <header
+        className={cn(
+          "fixed top-0 w-full z-50 transition-all duration-300 h-[72px] flex items-center",
+          scrolled
+            ? "bg-bg-dark/97 backdrop-blur-[12px] shadow-[0_1px_0_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.25)]"
+            : "bg-transparent"
+        )}
+      >
+        <div className="container mx-auto px-5 max-w-7xl flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl tracking-tight z-50">
+            <Leaf className="w-6 h-6 text-brand-green-light fill-brand-green-light" />
+            <span className="hidden sm:inline tracking-tight">BioSoil</span>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="nav-desktop hidden lg:flex items-center gap-8 text-sm font-semibold text-text-inverse tracking-wide">
+            {navLinks.map((link) =>
+              link.dropdown ? (
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={() => handleMouseEnter(link.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <button className="flex items-center gap-1 hover:text-brand-green-light transition-colors py-2">
+                    {link.label}
+                    <ChevronDown
+                      size={14}
+                      className={cn(
+                        "nav-arrow transition-transform duration-200",
+                        openMenu === link.label ? "rotate-180" : ""
+                      )}
+                    />
+                  </button>
+
+                  {openMenu === link.label && (
+                    <div className="mega-menu-panel absolute top-full left-0 mt-1 min-w-[220px] bg-bg-dark border border-border-dark rounded-md shadow-xl py-2 z-[999]">
+                      {link.dropdown.items.map((item) => (
+                        <Link
+                          key={item.label}
+                          to={item.href}
+                          onClick={() => setOpenMenu(null)}
+                          className="block px-4 py-2.5 text-sm text-text-muted hover:text-white hover:bg-white/5 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href ?? '/'}
+                  className="hover:text-brand-green-light transition-colors py-2"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
+
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-6">
+            <Link
+              to="/login"
+              className="text-sm font-semibold text-text-inverse hover:text-brand-green-light transition-colors"
+            >
+              Login
+            </Link>
+            <Button asChild className="bg-brand-green text-white hover:bg-brand-green-dark btn">
+              <Link to="/get-started">Get Started</Link>
+            </Button>
+          </div>
+
+          {/* Mobile Burger */}
+          <BurgerButton isOpen={drawerOpen} onClick={() => setDrawerOpen((v) => !v)} />
         </div>
-        
-        {/* Mobile menu button could go here */}
-      </div>
-    </header>
+      </header>
+
+      {/* Mobile Drawer */}
+      <MobileDrawer
+        isOpen={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        navLinks={navLinks}
+      />
+    </>
   );
 }
