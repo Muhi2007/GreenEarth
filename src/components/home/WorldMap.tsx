@@ -9,28 +9,12 @@ export function WorldMap() {
           BioSoil's BeCrop® Technology is Used All Over the World.
         </h2>
         
-        {/* Abstract World Map Visual */}
-        <div className="relative w-full aspect-[2/1] max-w-4xl mx-auto mb-16 opacity-30 grayscale">
-            <svg viewBox="0 0 1000 500" fill="currentColor" className="w-full text-brand-green h-auto">
-              <circle cx="200" cy="200" r="4" />
-              <circle cx="210" cy="180" r="4" />
-              <circle cx="230" cy="190" r="3" />
-              <circle cx="250" cy="170" r="5" />
-              
-              <circle cx="450" cy="150" r="4" />
-              <circle cx="480" cy="130" r="5" />
-              <circle cx="500" cy="140" r="6" />
-              <circle cx="530" cy="160" r="4" />
-              <circle cx="510" cy="180" r="5" />
-
-              <circle cx="750" cy="190" r="4" />
-              <circle cx="780" cy="210" r="5" />
-              <circle cx="800" cy="230" r="4" />
-              
-              <circle cx="350" cy="350" r="4" />
-              <circle cx="380" cy="380" r="5" />
-              <circle cx="400" cy="360" r="3" />
-            </svg>
+        <div className="relative w-full aspect-[2/1] max-w-4xl mx-auto mb-16 opacity-60 grayscale">
+            <img
+              src="/images/world-map.png"
+              alt="World map showing global usage of BeCrop technology"
+              className="w-full h-full object-contain"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-white via-transparent to-bg-white pointer-events-none" />
         </div>
       </div>

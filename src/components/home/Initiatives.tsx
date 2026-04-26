@@ -19,7 +19,7 @@ export function Initiatives() {
     {
       id: 'fields4ever',
       name: 'Fields4Ever',
-      image: 'https://images.unsplash.com/photo-1595844781442-99b821a737d2?q=80&w=800&auto=format&fit=crop',
+      image: '/images/initiative-fields4ever.webp',
       headline: 'Global Soil Conservation Initiative',
       description: 'A worldwide, collaborative initiative aiming to sequence and preserve the biological data of soils to safeguard our agricultural future against climate change.',
       href: '/fields4ever'
@@ -27,7 +27,7 @@ export function Initiatives() {
     {
       id: '2percent',
       name: '2%',
-      image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=800&auto=format&fit=crop',
+      image: '/images/initiative-2percent.webp',
       headline: 'The 2% Pledge',
       description: 'We commit 2% of our sequencing capacity to academic and non-profit research to further the collective understanding of soil microbiomes and global soil recovery.',
       href: '/2-percent'

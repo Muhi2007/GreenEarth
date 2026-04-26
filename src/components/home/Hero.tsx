@@ -1,20 +1,79 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const applyScrollEffect = () => {
+      if (!heroRef.current) return;
+      
+      const heroHeight = heroRef.current.offsetHeight;
+      const scrollY = window.scrollY;
+      
+      // Pause updates when hero is completely off-screen
+      if (scrollY > heroHeight) return;
+
+      // Safe guard against NaN
+      const progress = heroHeight > 0 ? Math.min(scrollY / heroHeight, 1) : 0;
+      
+      const scale = 1 + 0.12 * progress;
+      const translateY = -60 * progress;
+      const overlayAlpha = 0.55 + 0.27 * progress;
+
+      if (videoRef.current) {
+        videoRef.current.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+      }
+      if (overlayRef.current) {
+        overlayRef.current.style.opacity = overlayAlpha.toString();
+      }
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          applyScrollEffect();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initialize correct state if user refreshes mid-page
+    applyScrollEffect();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-bg-dark shrink-0" role="banner">
+    <section ref={heroRef} className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-bg-dark shrink-0" role="banner">
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay grayscale"
+        src="/images/hero-bg.mp4"
+        className="absolute inset-0 w-full h-full object-cover origin-center"
+        style={{ willChange: "transform" }}
         aria-hidden="true"
         poster="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=2000&auto=format&fit=crop"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/70" />
+      
+      {/* Dark overlay — opacity controlled by scroll */}
+      <div 
+        ref={overlayRef}
+        className="absolute inset-0 bg-black pointer-events-none" 
+        style={{ opacity: 0.55, willChange: "opacity" }}
+      />
 
       <div className="container relative z-10 mx-auto px-5 mt-16 max-w-4xl text-center flex flex-col items-center">
         <motion.h1 
